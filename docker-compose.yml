@@ -9,7 +9,7 @@ services:
         #   - klipper: Use this for Klipper / Moonraker based printers.
         #
         # Set this to the mode you want to use, and then uncomment the required settings for the mode bellow.
-        - COMPANION_MODE=bambu
+        - COMPANION_MODE=elegoo
 
         #
         # Required for Bambu Connect
@@ -28,7 +28,7 @@ services:
         # Required for Elegoo Connect
         #
         #  Find using the printer's display or use https://octoeverywhere.com/s/elegoo-ip
-        #- PRINTER_IP=XXX.XXX.XXX.XXX
+        - PRINTER_IP=192.168.68.63
 
 
         #
@@ -51,11 +51,11 @@ services:
         #
         # Set timezone to proper timezone for logs using standard timezones:
         # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
-        - TZ=America/New_York
+        - TZ=America/Los_Angeles
 
     volumes:
       # This can also be an absolute path, e.g. /var/octoeverywhere/plugin/data or /c/users/name/plugin/data
-      - ./data:/data
+      -  /c/Program Files/Docker/data
 
 
 
